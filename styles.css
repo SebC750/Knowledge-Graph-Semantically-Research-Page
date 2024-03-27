@@ -4,7 +4,7 @@
     padding: 20px;
     border: 5px; 
     border: 5px solid black; 
-    font-family: Tahoma, Arial, sans-serif;
+    
 }
 .paragraph{
     font-family: Tahoma, Arial, sans-serif;
@@ -28,3 +28,7 @@
   .video-container video {
     margin-right: 10px;
   }
+.col {
+    border: 5px; 
+    border: 5px solid black; 
+}
