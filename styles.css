@@ -1,59 +1,99 @@
-.title-jumbotron{
-    color:white;
+.title-jumbotron {
+    color: white;
     background-color: blue;
     padding: 20px;
-    border: 5px; 
-    border: 5px solid black; 
-    
+    border: 5px solid black; /* Combined border property */
 }
-.paragraph{
-    font-family: Tahoma, Arial, sans-serif;
+
+p{
+    font-size: 24px;
 }
+
 .hover-button {
     background-color: blue;
-    color: white; 
+    color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
+
 .hover-button:hover {
-    background-color: purple; 
+    background-color: purple;
 }
+
 .video-container {
     display: flex;
     flex-direction: column;
-  }
-  
-  .video-container video {
-    margin-right: 10px;
-  }
-.col {
-    border: 5px; 
-    border: 5px solid black; 
 }
+
+.video-container video {
+    margin-right: 10px;
+}
+
+.col {
+    border: 5px solid black; /* Combined border property */
+}
+
 .image-container {
     width: 100%;
-    height: 100%;
+    height: auto; /* Changed height to auto for responsiveness */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .resizable-image {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; /* Set maximum width relative to parent container */
+    height: auto; /* Changed height to auto for responsiveness */
 }
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid black;
-    margin: auto;
+
+.arrow {
+    position: relative;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    margin: 20px auto; /* Adjust as needed */
 }
+
+.arrow:before {
+    content: "";
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: -10px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    background-color: black;
+    transform: rotate(-45deg);
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: -10px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    background-color: black;
+    transform: rotate(45deg);
+}
+
 .container {
+    width: 100%;
+    height: auto; /* Changed height to auto for responsiveness */
     display: flex;
-    justify-content: space-between;
+   /* flex-direction: column; /* Change to column layout for mobile */
+    justify-content: center;
     align-items: center;
-  }
+    
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Switch back to row layout for larger screens */
+    }
+}
+.feedback-text{
+    font-size: 30px;
+}
