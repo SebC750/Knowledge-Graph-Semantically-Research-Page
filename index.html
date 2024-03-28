@@ -1,82 +1,254 @@
 <!DOCTYPE HTML5>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="styles.css"
-  />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="functions.js"></script>
 </head>
+
 <body>
-    <div class="title-jumbotron text-center" > 
+  <div class="title-jumbotron text-center">
     <h1> Enhancing Biomedical Content Authoring Through Knowledge Representation</h1>
-    
-</div>
-    <div class="paragraph text-center">
-    <p> 
-        There is a plethora of biomedical documents available to read on the internet. However, a significant majority of these texts are unstructured and lack semantic metadata that gives context for search engines to retrieve more precise information. To ameliorate this problem, many semantic annotators have been developed such as NCBO and RYSannMD.
-        Even so, these annotators still struggle to achieve optimal accuracy and speed metrics with their approaches to biomedical semantic content annotation. For our use case, we have introduced a knowledge graph with an nlp-enhanced search query approach that allows users to choose prominent semantic annotation recommended by the domain through a socio-technical and personalized approach. We have implemented this approach in "Semantically", a biomedical content semantic annotation platform to enhance semantic annotation of biomedical texts and embed it into the heading of documents for more accurate data retrieval.  
-    </p>
 
-    <p> This page is meant to present the current workflow and functionalities of the system, both using a social-technical approach and a social-technical approach with a knowledge graph based recommendation system enhancement.  Below you will see the workflow of the system with the knowledge graph tab.</p>
-    <div class="image-container text-center">
-      <img src="media/images/Semantically Knowledge Graph Diagram (1).svg" alt="Description of the image" class="resizable-image">
-      
-      
-      
   </div>
-  <div class="arrow"></div>
-  <div class="container" style="text-align: left;">
-  <img src="media/images/Semantically Knowledge Graph Diagram (2).svg" alt="Description of the image" class="resizable-image">
-  <img src="media\images\chronic_results.png" alt="Description of the image" class="resizable-image">
-  </div>
-</div>
-    <div class="video-container">
-        <div class="col" align="center">
-        <h2> Biomedical Semantic Annotation process + Social Technical Approach </h2>
-        <p> This is the demo for the social-technical approach.</p>
-        <video width="600" height="300" controls>
-          <source src="media/social-technical-pt1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <video width="600" height="300" controls>
-          <source src="media/social-technical-pt2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        </div>
-        <div class="col" align="center">
-        <h2> Biomedical Semantic Annotation process + Social Technical Approach + Knowledge Graph Recommendation Tab </h2>
-        <p> In this section, we provide videos/images of the demo. </p>
-        <p> In the social-technical approach video demo shown on the left, some user recommendations were given for the term "virus-replication-cycle". In the following video, a search query for this term in the knowledge graph tab shows the graph visualization and recommendation rankings.</p>
-        <video width="600" height="300" controls>
-          <source src="media\virus-replication-cycle.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <video width="600" height="300" controls>
-          <source src="media/medical_ontology_search.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="media/images/Sebastian_Chalarca_results.png" alt="Description of the image">
-        <br/>
-
-        <h3></h3>
-        <video width="600" height="300" controls>
-            <source src="media/expert_search.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
-          <img src="media/images/Chronic_inflammation_results.png" alt="Description of the image">
-    </div>
+  <div class="paragraph text-center">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="languageDropdown"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3> Select Language / Seleccionar lenguaje / Choisir la langue / Sprache auswählen</h3>
+      </button>
+      <div class="dropdown-menu btn-block" aria-labelledby="languageDropdown">
+        <a class="dropdown-item text-center" style="font-size: 20px;" id="en-option" href="#" data-language="en"><span
+            id="translateButton">Translate to English</span></a>
+        <a class="dropdown-item text-center" style="font-size: 20px;" id="es-option" href="#" data-language="es"><span
+            id="translateButton">Traducir a Español</span></a>
+        <a class="dropdown-item text-center" style="font-size: 20px;" id="fr-option" href="#" data-language="fr"><span
+            id="translateButton">Traduire en Français</span></a>
+        <a class="dropdown-item text-center" style="font-size: 20px;" id="de-option" href="#" data-language="de"><span
+            id="translateButton">Auf Deutsch übersetzen</span></a>
+        <!-- Add more language options as needed -->
       </div>
-    <div> 
-        <h1> Feedback Survey!</h1>
-        <p class="feedback-text"> Please take a moment to answer ten questions about your opinion on this program. This form data is used for optimizing the efficiency of the knowledge graph tab.</p>
-        <button class="hover-button text-center"> <a href="https://docs.google.com/forms/d/e/1FAIpQLSel9TSCstsCJRbpTdvVao56eVyfJwzuKgsTnA4I0DrXdvocXQ/viewform?usp=sf_link" style="color:white"> Take Survey!</a></button>
+
+      <p class="abstract-content">
+        There is a plethora of biomedical documents available to read on the internet. However, a significant majority
+        of these texts are unstructured and lack semantic metadata that gives context for search engines to retrieve
+        more precise information. To ameliorate this problem, many semantic annotators have been developed such as NCBO
+        and RYSannMD.
+        Even so, these annotators still struggle to achieve optimal accuracy and speed metrics with their approaches to
+        biomedical semantic content annotation. For our use case, we have introduced a knowledge graph based recommendation system approach that allows users to choose prominent semantic annotation recommended by the
+        domain through a socio-technical and personalized approach. We have implemented this approach in "Semantically",
+        a biomedical content semantic annotation platform to enhance semantic annotation of biomedical texts and embed
+        it into the heading of documents for more accurate data retrieval.
+      </p>
+
+      <p class="abstract-content"> This page is meant to present the current workflow and functionalities of the system,
+        both using a social-technical approach and a social-technical approach with a knowledge graph based
+        recommendation system enhancement. Below you will see the workflow of the system with the knowledge graph tab.
+      </p>
+      <div class="image-container text-center">
+        <img src="media/images/Semantically Knowledge Graph Diagram (1).svg" alt="Description of the image"
+          class="resizable-image">
+
+
+
+      </div>
+      <div class="arrow-down"></div>
+      <div class="image-container" style="text-align: left;">
+        <img class="img-containter_1" src="media/images/Semantically Knowledge Graph Diagram (2).svg"
+          alt="Description of the image" class="resizable-image">
+        <img class="img-containter_2" width="600" height="400" src="media\images\chronic_results.png"
+          alt="Description of the image" class="resizable-image">
+      </div>
+      <div>
+        <p> In both sections there are screenshots and videos demonstrating how the system functions without and with a
+          knowledge graph recommendation system. </p>
+      </div>
     </div>
+    <div class="video-container">
+      <div class="container">
+        <div class="row">
+          <div class="title-jumbotron">
+            <h2> Biomedical Semantic Annotation process + Social Technical Approach </h2>
+          </div>
+          <div class="col" align="center">
+            
+
+            <p> This is the demo for the social-technical approach.</p>
+            <p> For demonstration purposes, the following videos show an example of how a user may engage in the
+              semantic annotation process through a social-technical approach. The steps demonstrated are as follows:
+            </p>
+            <div align="left">
+              <ul>
+                <li>
+                 
+                  <h3> Step 1: </h3>  <p>The user selects a specific annotation in their document: "virus-replication-cycle".
+                  This opens an option to ask a social technical question or personalized recommendation. </p>
+                </li>
+                <li>
+                  
+                  <h3> Step 2:</h3> <p>A prompt will open where the user can select one of three questions for the selected
+                  term:</p>
+                  <ul>
+                    <li>
+                      <p>"Which ontology should I use?"</p>
+                    </li>
+                    <li>
+                      <p>"What is the suitable ontology vocabulary?"</p>
+                    </li>
+                    <li>
+                      <p>"Does this ontology best describe this terminology?"</p>
+                    </li>
+
+                  </ul>
+
+                  <p> The user also provides a description of what exactly they need. Once submitted, the post is
+                    publicized in the Semantically Cafe Forum.</p>
+                </li>
+                <li>
+                  
+                  <h3> Step 3:</h3> <p>Other domain experts and users respond by suggesting recommendations for ontologies.
+                  Users will also give themselves confidence_scores and explanations for their suggestions. In the
+                  videos featured below, two recommendations are made with different responses and confidence scores.
+                  </p>
+                </li>
+                <li>
+                  
+                  <h3> Step 4:</h3> <p>After responses are submitted, the original user can select the same term again
+                  (virus-replication-cycle) and see the new recommendations after clicking on the "New Recommendation"
+                  link that appears.</p>
+                </li>
+                <li>
+                  
+                  <h3>Step 5: </h3><p> The user opens a prompt showing the responses given by the other domain experts. The
+                  user has the option to choose between accepting or rejecting the recommendation. </p>
+                  <ul>
+                    <li>
+                      <p> If <span class="accept">accepted</span>, the user is prompted to give a rating from 1 to 5.
+                        The ontology and definition is then updated according to the accepted recommendation. </p>
+                    </li>
+                    <li>
+                      <p>If <span class="reject">rejected</span>, the prompt is closed and the original ontology of the
+                        term remains unchanged. </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <video width="100%" height="300" controls>
+                <source src="media/social-technical-pt1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col">
+              <video width="100%" height="300" controls>
+                <source src="media/social-technical-pt2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="title-jumbotron">
+                <h2>Biomedical Semantic Annotation process + Social Technical Approach + Knowledge Graph Recommendation Tab</h2>
+            </div>
+            <div class="col" align="center">
+              
+                <p>In this section, we provide videos/images of the demonstration for the Knowledge Graph Recommendation System process.</p>
+                <p>In the social-technical approach video demo shown above, some user recommendations were given for the term "virus-replication-cycle". In the following video, a search query for this term in the knowledge graph tab shows the graph visualization and recommendation rankings.</p>
+                <p> The step-by-step process of knowledge graph recommendation querying is as follows: </p>
+                <div align="left">
+                <ul>
+                  <li> <h3> Step 1: </h3> <p> Select a search type (user, medical term or ontology)</p></li>
+                  <li> <h3> Step 2: </h3> <p> Input your search query. </p></li>
+                  <li> <h3> Step 3: </h3> <p> Submit to generate the knowledge graph. </p></li>
+                </ul>
+              </div>
+                <h3> Scoring system </h3>
+                <p> In order for a recommendation system to return the best recommendations for their purposes, an accurate scoring system is needed to convert critical reception of recommendations into an accurate form of ranking. The formula is as follows: </p>
+                <img  src="/media/images/score_calc.png" alt="Description of the image">
+                <span> * </span>
+                <div align="left">
+                <ul>
+                  <li> <h3> Step 1: </h3> <p> The wilson score is calculated first, using the total upvotes and total votes with the given formula </p> <img  src="/media/images/wilson_score.png" alt="Description of the image"> <p> Where p is the number of upvotes divided by the total number of votes and n is the total number of votes. </p></li>
+                  <li> <h3> Step 2: </h3> <p> Take the confidence score and rating (if any) and normalize the values. </p></li>
+                  <li> <h3> Step 3: </h3> <p> Add the wilson score with the normalized confidence score and rating score. Then divide by 3. </p></li>
+                </ul>
+              </div>
+                <div align="left">
+                  
+                </div>
+                <video width="600" height="300" controls>
+                    <source src="media\virus-replication-cycle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <h3> Other examples </h3>
+                <p> There are other examples which illustrate the functionality of the knowledge graph search tab. Users also have the option to search for domain experts and ontologies. </p>
+                <div class="row">
+                    <div class="col">
+                        <video width="600" height="300" controls>
+                            <source src="media/expert_search.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img width="600" height="300" src="media/images/Sebastian_Chalarca_results.png" alt="Description of the image">
+                    </div>
+                    <div class="col">
+                        <p> In this video, the user searches for a specific user/domain expert. The knowledge graph tab returns a knowledge graph of all the responses and ontological suggestions made by the domain expert. It returns information such as: </p>
+                        <ul>
+                          <li> <p> Ontologies the user has suggested.</p> </li>
+                          <li> <p> The replies from which these ontologies were suggested.</p></li>
+                          <li> <p> The critical reception of these recommendations by the domain expert (confidence_score and vote ratio)</p> </li>
+      
+                        </ul>
+                        <p>
+                            The domain expert search function is useful for users to determine which users are most reliable in general or for a given biomedical subdomain. If a user has a high ranking score, this will also give users confidence in seeking personalized recommendations from such domain experts.
+                        </p>
+                        <p> Under the video, an image of the recommendation system returning the results for domain expert "Sebastian Chalarca" is shown. </p>
+                    </div>
+                </div>
+    
+                
+    
+                <div class="row">
+                    <div class="col">
+                        <video width="600" height="300" controls>
+                            <source src="media/medical_ontology_search.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img width="600" height="300" src="media/images/Chronic_inflammation_results.png" alt="Description of the image">
+                    </div>
+                    <div class="col">
+                        <p> In this video, the user searches for recommendations for the given term "Chronic inflammation". A knowledge graph consisting of the term is generated, which returns information such as:</p>
+                        <ul>
+                          <li> <p>Suggested ontologies </p> </li>
+                          <li> <p> Posts related to suggested ontologies</p> </li>
+                          <li> <p> Replies made to posts</p> </li>
+                          <li> <p> Reception (confidence_score and vote ratio)</p></li>
+                        </ul>
+
+                        <p> Under the video, the results obtained from searching for the medical term "Chronic inflammation" are displayed. Only the top 5 most rated recommendations (obtained by calculating the total score) for relevancy. The highest score is featured as the best recommendation for the given term.</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1> Feedback Survey!</h1>
+    <p class="feedback-text"> Please take a moment to answer ten questions about your opinion on this program. This form
+      data is used for optimizing the efficiency of the knowledge graph tab.</p>
+    <button class="hover-button text-center btn-block" style="padding: 10px; font-size: 36px;"> <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSel9TSCstsCJRbpTdvVao56eVyfJwzuKgsTnA4I0DrXdvocXQ/viewform?usp=sf_link"
+        style="color:white"> Take Survey!</a></button>
+
+
+  </div>
 </body>

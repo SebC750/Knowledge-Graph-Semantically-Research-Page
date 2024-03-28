@@ -3,12 +3,28 @@
     background-color: blue;
     padding: 20px;
     border: 5px solid black; /* Combined border property */
+    width: 100%;
+}
+.accept{
+   padding: 10px;
+   background-color: green;
+   color: white;
+   border-radius: 10px;
+}
+ul{
+    list-style-type: none; /* Remove default list-style */
+  padding-left: 0;
+}
+.reject{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
 }
 
-p{
-    font-size: 24px;
+.abstract-content{
+    font-size:24px;
 }
-
 .hover-button {
     background-color: blue;
     color: white;
@@ -36,48 +52,44 @@ p{
     border: 5px solid black; /* Combined border property */
 }
 
-.image-container {
-    width: 100%;
-    height: auto; /* Changed height to auto for responsiveness */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-containter_1, .img-containter_2 {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .image-container {
+    text-align: center;
+    
+    
+    
 }
+  .resizable-image {
+    max-width: 100%; /* makes sure the image is not wider than its container */
+    height: auto; /* keeps the image's aspect ratio intact */
+    display: block; /* prevents inline default spacing */
+    margin: 0 auto; /* centers the image in its container if it's smaller */
+  }
 
-.resizable-image {
-    max-width: 100%; /* Set maximum width relative to parent container */
-    height: auto; /* Changed height to auto for responsiveness */
-}
-
-.arrow {
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    margin: auto;
     position: relative;
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
-    margin: 20px auto; /* Adjust as needed */
 }
 
-.arrow:before {
+.arrow-down::after {
     content: "";
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: -10px; /* Adjust as needed */
-    width: 60px; /* Adjust as needed */
-    height: 20px; /* Adjust as needed */
-    background-color: black;
-    transform: rotate(-45deg);
+    top: 20px;
+    left: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
 }
-
-.arrow:after {
-    content: "";
-    position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: -10px; /* Adjust as needed */
-    width: 60px; /* Adjust as needed */
-    height: 20px; /* Adjust as needed */
-    background-color: black;
-    transform: rotate(45deg);
-}
-
 .container {
     width: 100%;
     height: auto; /* Changed height to auto for responsiveness */
@@ -96,4 +108,8 @@ p{
 }
 .feedback-text{
     font-size: 30px;
+}
+
+.dropdown-item{
+   width: 100%;
 }
