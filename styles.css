@@ -2,7 +2,7 @@
     color: white;
     background-color: blue;
     padding: 20px;
-    border: 5px solid black; /* Combined border property */
+    border: 5px solid black; 
     width: 100%;
 }
 .accept{
@@ -12,7 +12,7 @@
    border-radius: 10px;
 }
 ul{
-    list-style-type: none; /* Remove default list-style */
+    list-style-type: none; 
   padding-left: 0;
 }
 .reject{
@@ -57,26 +57,29 @@ ul{
 }
 
 .col {
-    border: 5px solid black; /* Combined border property */
+    border: 5px solid black; 
 }
 
 .img-containter_1, .img-containter_2 {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   .image-container {
     text-align: center;
-    
-    
-    
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-wrapper {
+    padding: 0 15px; 
 }
   .resizable-image {
-    max-width: 100%; /* makes sure the image is not wider than its container */
-    height: auto; /* keeps the image's aspect ratio intact */
-    display: block; /* prevents inline default spacing */
-    margin: 0 auto; /* centers the image in its container if it's smaller */
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
   }
 
 .arrow-down {
@@ -89,20 +92,12 @@ ul{
     position: relative;
 }
 
-.arrow-down::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: -20px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid black;
-}
+
 .container {
     width: 100%;
-    height: auto; /* Changed height to auto for responsiveness */
+    height: auto; 
     display: flex;
-   /* flex-direction: column; /* Change to column layout for mobile */
+   
     justify-content: center;
     align-items: center;
     
@@ -111,7 +106,7 @@ ul{
 
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Switch back to row layout for larger screens */
+        flex-direction: row; 
     }
 }
 .feedback-text{
