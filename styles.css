@@ -34,9 +34,17 @@ ul{
     transition: background-color 0.3s ease;
     border-radius: 10px;
 }
-
+.hover-button-spanish {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
 .hover-button:hover {
-    background-color: purple;
+    background-color: #05053f;
 }
 
 .video-container {
@@ -112,4 +120,7 @@ ul{
 
 .dropdown-item{
    width: 100%;
+}
+.hover-button-spanish:hover{
+      background-color: orange;
 }

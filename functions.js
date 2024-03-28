@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown items
     const enOption = document.getElementById('en-option')
     const esOption = document.getElementById('es-option');
-    const frOption = document.getElementById('fr-option');
-    const deOption = document.getElementById('de-option');
+    
 
     enOption.addEventListener('click', function() {
         translateToLanguage('en');
@@ -13,13 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         translateToLanguage('es');
     });
 
-    frOption.addEventListener('click', function() {
-        translateToLanguage('fr');
-    });
-
-    deOption.addEventListener('click', function() {
-        translateToLanguage('de');
-    });
+   
 
     function translateToLanguage(targetLanguage) {
         // Get all <p> elements
