@@ -44,7 +44,7 @@
       </p>
 
       <p class="abstract-content"> This page is meant to present the current workflow and functionalities of the system,
-        both using a social-technical approach and a social-technical approach with a knowledge graph based
+        showing the diffrent approaches such as using a social-technical approach, personalized approach and a knowledge graph based
         recommendation system enhancement. Below you will see the workflow of the system with the knowledge graph tab.
       </p>
       <div class="image-container text-center">
@@ -76,7 +76,7 @@
       <div class="container">
         <div class="row">
           <div class="title-jumbotron">
-            <h2> Biomedical Semantic Annotation process + Social Technical Approach </h2>
+            <h2> Biomedical Semantic Annotation process + Social Technical Approach + Personalized Approach</h2>
           </div>
           <div class="col" align="center">
             
@@ -88,6 +88,7 @@
             <p> For demonstration purposes, the following videos show an example of how a user may engage in the
               semantic annotation process through a social-technical approach. The steps demonstrated are as follows:
             </p>
+            <h3> Social-Technical Recommendation </h3>
             <div align="left">
               <ul>
                 <li>
@@ -145,25 +146,51 @@
                 </li>
               </ul>
             </div>
-            <div class="col">
+            <div class="row">
+            <div class="col-6">
               <video width="100%" height="300" controls>
                 <source src="media/social-technical-pt1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div class="col">
+            <div class="col-6">
               <video width="100%" height="300" controls>
                 <source src="media/social-technical-pt2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
+            <div>
+              <h3> Personalized Recommendation </h3>
+              <p> Users may also have the option of seeking help from specific domain experts that are relevant to the biomedical subdomain that you are seeking help for. When a user selects the personalized recommendation option, a prompt will appear displaying a table of the most relevant users, based on weighted score and similarity score. </p>
+              <ul>
+                <li> <p>  Cosine Similarity: For the personalized approach, the cosine similarity is obtained by the formula shown below, where a represents the author embedding vectors and u represents the user embedding vectors.</p> <img src="/media/images/cosine_similarity.png"></li>
+                <li> <p>  Weighted score: The weighted score is obtained from the product of the cosine similarity and the mean score.</p> <img src="/media/images/weighted_score.png"></li>
+              </ul>
+              <p> The cosine similarity scores are then used to sort descending order where the 5 topmost experts are the most relevant experts for the user. After selecting the expert, the user is then prompted to ask a question to the expert and submit. </p>
+            </div>
+            <p> The following videos demonstrate a scenario where a user seeks a personalized recommendation for the term "Inflammatory Mediators". The second video specifically shows that the targeted domain expert receives the directed post under their direct post tab.</p>
+            <div class="row">
+            <div class="col-6">
+              <video width="100%" height="300" controls>
+                <source src="media/personal_rec_submit.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-6">
+              <video width="100%" height="300" controls>
+                <source src="media/personal_rec_result.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
             <div class="title-jumbotron">
-                <h2>Biomedical Semantic Annotation process + Social Technical Approach + Knowledge Graph Recommendation Tab</h2>
+                <h2>Biomedical Semantic Annotation process + Social Technical Approach + Personalized Approach + Knowledge Graph Recommendation Tab</h2>
             </div>
             <div class="col" align="center">
               
