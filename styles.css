@@ -119,3 +119,8 @@ ul{
 .hover-button-spanish:hover{
       background-color: orange;
 }
+.warning{
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 10px;
+}

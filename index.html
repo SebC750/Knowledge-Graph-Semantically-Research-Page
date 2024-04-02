@@ -149,13 +149,13 @@
             <div class="row">
             <div class="col-6">
               <video width="100%" height="300" controls>
-                <source src="media/social-technical-pt1.mp4" type="video/mp4">
+                <source src="media/Social-Technical-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
             <div class="col-6">
               <video width="100%" height="300" controls>
-                <source src="media/social-technical-pt2.mp4" type="video/mp4">
+                <source src="media/Social-Technical-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -215,23 +215,49 @@
                   <li> <h3> Step 3: </h3> <p> Add the wilson score with the normalized confidence score and rating score. Then divide by 3. </p></li>
                 </ul>
               </div>
+              <div> <p> <span class="warning">UPDATE:</span> After some feedback, the scoring system has been reevaluated to account for the potential bias that can result from a self-evaluation score. The values now have weights, with confidence scores having the lowest weight (0.20) to the wilson score and rating score (0.40). This helps to ensure that confidence scores, which can be overestimated/underestimated by domain experts, have less sway over which recommendations are prioritized over others.</p></div>
                 <div align="left">
                   
                 </div>
                 <video width="600" height="300" controls>
-                    <source src="media\virus-replication-cycle.mp4" type="video/mp4">
+                    <source src="media\Knowledge-graph-result.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
                 <h3> Other examples </h3>
-                <p> There are other examples which illustrate the functionality of the knowledge graph search tab. Users also have the option to search for domain experts and ontologies. </p>
+                <p> There are other examples which illustrate the functionality of the knowledge graph search tab. Users also have the option to search for domain experts, medical terms and ontologies. </p>
                 <div class="row">
                     <div class="col">
-                        <video width="600" height="300" controls>
-                            <source src="media/expert_search.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <img width="600" height="300" src="media/images/Sebastian_Chalarca_results.png" alt="Description of the image">
+                      <video width="600" height="300" controls>
+                        <source src="media/User-KG-result.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100"  src="media\images\expert-table.png" alt="Description of the image">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100"  src="media\images\Expert-KG-result.png" alt="Second slide">
+                          </div>
+                          
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                       
+                        
                     </div>
                     <div class="col">
                         <p> In this video, the user searches for a specific user/domain expert. The knowledge graph tab returns a knowledge graph of all the responses and ontological suggestions made by the domain expert. It returns information such as: </p>
@@ -252,12 +278,38 @@
     
                 <div class="row">
                     <div class="col">
-                        <video width="600" height="300" controls>
-                            <source src="media/medical_ontology_search.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <img width="600" height="300" src="media/images/Chronic_inflammation_results.png" alt="Description of the image">
+                      <video width="600" height="300" controls>
+                        <source src="media/medical_term_KG-result.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                      <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                          
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100"  src="media\images\medical-table.png" alt="Description of the image">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100"  src="media\images\medical_term-img.png" alt="Second slide">
+                          </div>
+                          
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                        
+                        
                     </div>
+                    
                     <div class="col">
                         <p> In this video, the user searches for recommendations for the given term "Chronic inflammation". A knowledge graph consisting of the term is generated, which returns information such as:</p>
                         <ul>
@@ -270,7 +322,53 @@
                         <p> Under the video, the results obtained from searching for the medical term "Chronic inflammation" are displayed. Only the top 5 most rated recommendations (obtained by calculating the total score) for relevancy. The highest score is featured as the best recommendation for the given term.</p>
                     </div>
                 </div>
+                <div class="row">
+                  <div class="col">
+                    <video width="600" height="300" controls>
+                      <source src="media/Ontology-KG-result.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                      
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100"  src="media\images\ontology-table.png" alt="Description of the image">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100"  src="media\images\Ont-KG-img.png" alt="Second slide">
+                      </div>
+                      
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                    </div>
+                    <div class="col">
+                       <p> this last video, users search for a specific ontology, which returns all of the related information regarding that ontology, including:
+                        <ul>
+                          <li> <p> medical terms suggested by the given ontology </p></li>
+                          <li> <p> forum posts where the ontology was accepted for that term. </p></li>
+                          <li> <p> The reply which suggested the ontology </p></li>
+                          <li> <p> Tally of upvotes, downvotes and sum of confidence score. </p></li>
 
+    
+                          
+                        </ul>
+                         
+                       </p>
+                       <p> Under the video are the results of the graph and the list of recommendations. These recommendations are </p>  
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
